@@ -544,6 +544,7 @@ function RageUI.Render()
             end
             if RageUI.NextMenu ~= nil then
                 if RageUI.NextMenu() then
+                    Wait(1) --> New Wait added to not execute the next button while clicked on a sub menu.
                     RageUI.Visible(CurrentMenu, false)
                     RageUI.Visible(RageUI.NextMenu, true)
                     CurrentMenu.Controls.Select.Active = false
